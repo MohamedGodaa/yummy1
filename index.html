@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Yummy</title>
+</head>
+<body>
+    <div id="load" class="center">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+      </div>
+    <!-- Start Side Bar -->
+
+    <div class="side-nav-menu position-fixed d-flex top-0 text-white">
+        <div class="nav-tab d-flex flex-column justify-content-between min-vh-100 p-4">
+            <div class="links">
+                <ul class="list-unstyled">
+                    <li id="Searchs"  class="py-2 cursor-pointer">Search</li>
+                    <li id="Categories" onclick="getApiCategories()" class="py-2 cursor-pointer">Categories</li>
+                    <li id="Areas" onclick="getArea()" class="py-2 cursor-pointer">Area</li>
+                    <li id="Ingredients" onclick="getIngredient()" class="py-2 cursor-pointer">Ingredients</li>
+                    <li id="Contacts" class="py-2 cursor-pointer">Contact Us</li>
+                </ul>
+            </div>
+            <div class="footer">
+                <div class="icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="footer">
+                    <p class="">
+                        Copyright Â© 2019 All Rights
+                        <br>
+                        Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar py-5 d-flex px-3 flex-column text-black">
+            <div>
+                <img src="./logo.png" alt="" class="imglogo w-100">
+            </div>
+            <div class="w-100 mx-auto text-center open">
+                <i id="bar" class="fa-solid fa-bars"></i>
+                <i id="fulse" class="fa-solid fa-xmark d-none"></i>
+            </div>
+            <div class="w-100 text-center social">
+                <i class="fa-solid fa-globe d-block my-2"></i>
+                <i class="fa-solid fa-share-nodes d-block"></i>
+            </div>
+        </div>
+    </div>
+    <!-- End Side Bar -->
+    
+    
+    
+    <div id="dataHome" class="row w-75 container">
+        
+    </div>
+
+
+    <div id="search" class="container  w-75 row  my-5 d-none">
+        <div class="col-md-6">
+            <input type="text" id="byName" placeholder="Search By Name" class="form-control  bg-transparent" >
+        </div>
+        <div class="col-md-6">
+            <input type="text" id="byFirstLetter" placeholder="Search By First Letter" class="form-control  bg-transparent">
+        </div>
+        <div id="dataSearch" class="row">
+        
+        </div>
+    </div>
+
+    <div id="Categorie" class="container w-75  my-5 d-none row ">
+        
+    </div>
+    <div id="Area" class="container w-75 mx-auto  my-5 d-none row">
+        
+    </div>
+    <div id="Ingredient" class="container w-75 my-5 d-none row">
+        
+    </div>
+    <div id="Contact" class="container  d-none">
+        <div class="d-flex justify-content-center align-items-center mx-auto form min-vh-100">
+            <div class="container w-75 text-center">
+                <div class="row g-4 ">
+                    <input type="text" class="col-md-6 form-control  mx-2 my-2" id="name" placeholder="Enter Your Name">
+                    <input type="email" onkeyup="emailValidation()" class="col-md-6 form-control  mx-2 my-2" id="email" placeholder="Enter Your Email">
+                    
+                    <input type="text" class="col-md-6 form-control mx-2 my-2" id="phone" placeholder="Enter Your phone">
+                    <input type="number" class="col-md-6 form-control mx-2 my-2" id="age" placeholder="Enter Your age">
+                    <input type="password" class="col-md-6 form-control mx-2 my-2" id="password"  placeholder="Enter Your Password">
+                    <input type="password" class="col-md-6 form-control mx-2 my-2" id="reRassword" placeholder="Enter Your Repassword">
+                    <input type="button" value="Submit" class="btn btn-outline-danger mx-auto">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
